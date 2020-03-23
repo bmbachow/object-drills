@@ -16,8 +16,8 @@
 //   spam: 'bigbux'
 // };
 
-// for (const property in brianObject) {
-//   console.log(`${property}: ${brianObject[property]}`);
+// for (const property in brianObject') {
+//   console.log(`${property}: $'{brianObject[property]}`);
 // }
 
 // let whateverObject = {
@@ -54,27 +54,45 @@
 //   }
 // });
 
-function createCharacter(name, nickname, race, origin, attack, defense){
+// function createCharacter(name, nickname, race, origin, attack, defense){
 
-  const character = {
-    name: name,
-    nickname: nickname,
-    race: race,
-    origin: origin,
-    attack: attack,
-    defense: defense,
-    describe: function(){
-      console.log(`${name} is a ${race} from {origin}`);
-    },
-    evaluateFight: function(char){
-      let x = this.attack - character.defense;
-      let y = this.defense - character.attack;
+//   const character = {
+//     name: name,
+//     nickname: nickname,
+//     race: race,
+//     origin: origin,
+//     attack: attack,
+//     defense: defense,
+//     describe: function(){
+//       console.log(`${name} is a ${race} from {origin}`);
+//     },
+//     evaluateFight: function(char){
+//       let x = this.attack - character.defense;
+//       let y = this.defense - character.attack;
       
 
-    }
-  };
+//     }
+//   };
 
 
 
-}
+// }
 
+const HEROES = [
+  { id: 1, name: 'Captain America', squad: 'Avengers' },
+  { id: 2, name: 'Iron Man', squad: 'Avengers' },
+  { id: 3, name: 'Spiderman', squad: 'Avengers' },
+  { id: 4, name: 'Superman', squad: 'Justice League' },
+  { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+  { id: 6, name: 'Aquaman', squad: 'Justice League' },
+  { id: 7, name: 'Hulk', squad: 'Avengers' },
+];
+
+function findOne(arr, query){
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i][0] == query) {
+      return arr[i]
+    }}
+
+
+findOne(HEROES, { id: 1 })
