@@ -78,21 +78,33 @@
 
 // }
 
-const HEROES = [
-  { id: 1, name: 'Captain America', squad: 'Avengers' },
-  { id: 2, name: 'Iron Man', squad: 'Avengers' },
-  { id: 3, name: 'Spiderman', squad: 'Avengers' },
-  { id: 4, name: 'Superman', squad: 'Justice League' },
-  { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
-  { id: 6, name: 'Aquaman', squad: 'Justice League' },
-  { id: 7, name: 'Hulk', squad: 'Avengers' },
-];
+// const HEROES = [
+//   { id: 1, name: 'Captain America', squad: 'Avengers' },
+//   { id: 2, name: 'Iron Man', squad: 'Avengers' },
+//   { id: 3, name: 'Spiderman', squad: 'Avengers' },
+//   { id: 4, name: 'Superman', squad: 'Justice League' },
+//   { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+//   { id: 6, name: 'Aquaman', squad: 'Justice League' },
+//   { id: 7, name: 'Hulk', squad: 'Avengers' },
+// ];
 
-function findOne(arr, query){
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i][0] == query) {
-      return arr[i]
-    }}
+// function findOne(arr,query){
+//   return arr.filter(a=>a.id===query.id);
+// }
 
+// findOne(HEROES, { id: 1 });
 
-findOne(HEROES, { id: 1 })
+const Database = {
+  store: {
+    heroes: [
+      { id: 1, name: 'Captain America', squad: 'Avengers' },
+      { id: 2, name: 'Iron Man', squad: 'Avengers' },
+      { id: 3, name: 'Spiderman', squad: 'Avengers' },
+      { id: 4, name: 'Superman', squad: 'Justice League' },
+      { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+      { id: 6, name: 'Aquaman', squad: 'Justice League' },
+      { id: 7, name: 'Hulk', squad: 'Avengers' },
+    ],
+    {findOne: function(arr,query){
+          return arr.filter(a=>a.id===query.id)}}}}
+
